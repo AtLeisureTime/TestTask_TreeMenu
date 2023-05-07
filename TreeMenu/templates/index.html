@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load my_tags %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    {% draw_menu 'main_menu' request.path %}
+    {% draw_menu 'menu2' request.path %}
+{% endblock %}
+
+{% block include_js %}
+<script>
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+    
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+</script>
+{% endblock %}

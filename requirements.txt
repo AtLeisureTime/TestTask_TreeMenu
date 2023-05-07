@@ -1,0 +1,9 @@
+Django~=4.1.0
+
+# for visual studio code
+autopep8
+pylint
+pylint-django
+pylint-plugin-utils
+flake8
+pyflakes
